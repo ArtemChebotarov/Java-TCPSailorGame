@@ -31,12 +31,14 @@ who is already in the game.
 As said before, the server receives messages from clients. They are divided into 3 types: commands, plain text for
 communication with players and the numbers given in the game. Commands, in turn, are preceded by the sign '/'. In this case,
 the Server accepts 4 basic commands:
-• /JOIN own_name first name of the current player - is used by the client to join the game and establish a unique name
-• /SET own_name - used to determine the name of the first player
-• /ASK - used by the client to obtain information about current players
-• /QUIT - used to disconnect a player from the game and remove him from the player list. At the same time, it is not
+
+/JOIN own_name first name of the current player - is used by the client to join the game and establish a unique name
+/SET own_name - used to determine the name of the first player
+/ASK - used by the client to obtain information about current players
+/QUIT - used to disconnect a player from the game and remove him from the player list. At the same time, it is not
 completely disconnected from the server, it can join the game at any time by using the / JOIN command. (NOTE! This command
 may not be used during the game)
+
 All other messages containing the sign '/' will be ignored by the Server, the client will receive a message regarding the
 inappropriate use of the sign '/'. All other messages will be displayed to other players for communication (there is no
 communication between players during the game) or will be saved as numbers during the game.
@@ -45,7 +47,9 @@ the Server will begin a countdown of up to 15 seconds, through which the Server 
 between all current players. During these 15 seconds, players who are not included in the game will still be able to join.
 After 15 seconds, all players will receive a message about all competitions between current players and their order. The game
 between the first participants of this list will start immediately.
+
 The gameplay looks as follows:
+
 a) A pair of players will receive a message informing them of the player from whom the countdown will begin. This player is
 designated randomly
 b) Player A and player B give one integer
@@ -57,8 +61,9 @@ e) The next pair plays the game in the same way until the pair ends
 f) Eventually all players will receive the leaderboard, Server will start
 a countdown of up to 15 seconds during which new players can join the game and already existing players can leave the game and
 a renewal game starts if at least 2 players are present
-It is worth noting that for the fairness of the game, the "Caesar cipher" cryptography method has been added, allowing for safe
-number transfer between the player and the server. The method works as follows:
+
+It is worth noting that for the fairness of the game, the "Caesar cipher" cryptography method has been added, allowing for safe number transfer between the player and the server. The method works as follows:
+
 a) When joining a player, a key from 0 to 100 is randomly assigned
 b) When choosing a number during the game, the key to is automatically added
 selected number
