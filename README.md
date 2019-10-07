@@ -67,9 +67,11 @@ c) When calculating, the key is automatically subtracted from the selected numbe
 Observations, experiments and conclusions:
 
 I would like to note some restrictions defined for the fair and orderly operation of the program:
+
 General:
 1. Messages sent by the server will only be received by players connected to the game 
 2. It is not allowed to specify names that are repeated in the list of players
+
 During the game:
 1. There is no communication between players
 2. All messages except numbers will be ignored
@@ -78,5 +80,6 @@ competitions
 4. Do not change the number you have chosen
 5. Do not leave the game by the / QUIT command. In case of
 leaving the game systemically, the game will end automatically and start from the beginning with players present at that time
+
 Using commands:
 All messages containing '/' other than existing commands will be ignored
